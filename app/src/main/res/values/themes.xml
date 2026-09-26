@@ -1,0 +1,7 @@
+<resources>
+    <style name="Theme.AndroidAIStudio" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="android:statusBarColor">#131314</item>
+        <item name="android:navigationBarColor">#131314</item>
+        <item name="android:windowBackground">#131314</item>
+    </style>
+</resources>
