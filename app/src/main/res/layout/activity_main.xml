@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg_main"
-    android:orientation="VERTICAL"
+    android:orientation="vertical"
     android:padding="20dp">
 
     <!-- Top App Bar -->
@@ -12,14 +12,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
-        android:orientation="HORIZONTAL"
+        android:orientation="horizontal"
         android:paddingBottom="24dp">
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:orientation="VERTICAL">
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -54,7 +54,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="VERTICAL">
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -81,7 +81,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
-                    android:orientation="HORIZONTAL"
+                    android:orientation="horizontal"
                     android:padding="20dp">
 
                     <ImageView
@@ -97,7 +97,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:layout_weight="1"
-                        android:orientation="VERTICAL">
+                        android:orientation="vertical">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -128,7 +128,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="24dp"
-                android:orientation="HORIZONTAL">
+                android:orientation="horizontal">
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btn_open_project"
@@ -169,7 +169,7 @@
                 android:id="@+id/container_recent_projects"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="VERTICAL" />
+                android:orientation="vertical" />
 
         </LinearLayout>
     </ScrollView>
