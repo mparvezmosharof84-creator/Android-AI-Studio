@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/bg_card"
-    android:orientation="VERTICAL"
+    android:orientation="vertical"
     android:padding="24dp">
 
     <TextView
@@ -118,7 +118,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="end"
-        android:orientation="HORIZONTAL">
+        android:orientation="horizontal">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_cancel"
