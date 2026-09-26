@@ -3,6 +3,7 @@ package com.parvez.aistudio
 import android.app.Dialog
 import android.content.Intent
 import android.graphics.Color
+import android.graphics.Typeface
 import android.graphics.drawable.ColorDrawable
 import android.net.Uri
 import android.os.Build
@@ -98,7 +99,6 @@ class MainActivity : AppCompatActivity() {
         srcDir.mkdirs()
         resDir.mkdirs()
 
-        // Create MainActivity file
         val mainActivityFile = File(srcDir, "MainActivity.kt")
         mainActivityFile.writeText(
             """
@@ -116,7 +116,6 @@ class MainActivity : AppCompatActivity() {
             """.trimIndent()
         )
 
-        // Create Layout XML file
         val layoutFile = File(resDir, "activity_main.xml")
         layoutFile.writeText(
             """
@@ -125,7 +124,7 @@ class MainActivity : AppCompatActivity() {
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:orientation="VERTICAL"
+                android:orientation="vertical"
                 android:background="#131314">
 
                 <TextView
@@ -153,7 +152,7 @@ class MainActivity : AppCompatActivity() {
             val tv = TextView(this).apply {
                 text = "কোনো পূর্বের প্রজেক্ট নেই। Create New Project এ চাপুন।"
                 setTextColor(Color.parseColor("#8E918F"))
-                textSize = 13spToPx()
+                textSize = 13f
                 setPadding(0, 16, 0, 16)
             }
             containerRecent.addView(tv)
@@ -180,7 +179,7 @@ class MainActivity : AppCompatActivity() {
                         text = project.name
                         setTextColor(Color.WHITE)
                         textSize = 15f
-                        typeface = android.graphics.Typeface.DEFAULT_BOLD
+                        typeface = Typeface.DEFAULT_BOLD
                     }
                     val path = TextView(this@MainActivity).apply {
                         text = project.absolutePath
@@ -206,10 +205,4 @@ class MainActivity : AppCompatActivity() {
         }
         startActivity(intent)
     }
-
-    private fun TextView.textSizeSp(sp: Float) {
-        textSize = sp
-    }
-
-    private fun Int.spToPx(): Float = this * resources.displayMetrics.scaledDensity
 }
