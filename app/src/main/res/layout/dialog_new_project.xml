@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_card"
+    android:orientation="VERTICAL"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Android Project"
+        android:textColor="@color/text_white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Configure your native project architecture"
+        android:textColor="@color/text_secondary"
+        android:textSize="12sp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:hint="Project Name"
+        app:boxStrokeColor="@color/accent_blue">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_project_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MyAwesomeApp"
+            android:textColor="@color/text_white" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="Package Name"
+        app:boxStrokeColor="@color/accent_blue">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_package_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="com.parvez.myawesomeapp"
+            android:textColor="@color/text_white" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Language Selector -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Language"
+        android:textColor="@color/text_secondary"
+        android:textSize="12sp" />
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/toggle_language"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:checkedButton="@id/btn_lang_kotlin"
+        app:singleSelection="true">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_lang_kotlin"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Kotlin"
+            android:textColor="@color/text_white" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_lang_java"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Java"
+            android:textColor="@color/text_white" />
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    <!-- Template Options -->
+    <RadioGroup
+        android:id="@+id/rg_templates"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp">
+
+        <RadioButton
+            android:id="@+id/rb_template_empty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Empty Activity (Standard native setup)"
+            android:textColor="@color/text_white" />
+
+        <RadioButton
+            android:id="@+id/rb_template_3d"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3D Game Engine Canvas (OpenGL ES 3.0)"
+            android:textColor="@color/accent_blue" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:orientation="HORIZONTAL">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_cancel"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="Cancel"
+            android:textColor="@color/text_secondary" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_create"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/accent_blue"
+            android:text="Create Project"
+            android:textColor="@color/bg_main"
+            android:textStyle="bold"
+            app:cornerRadius="12dp" />
+    </LinearLayout>
+</LinearLayout>
